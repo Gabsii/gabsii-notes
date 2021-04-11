@@ -25,7 +25,6 @@ const Editor = ({mdParser, storedNotes, setNotes}: EditorComponentType) => {
       sanitizedInput !== '\r\n' && 
       sanitizedInput !== '\n' 
     ) {
-      console.log(sanitizedInput.trim());
       const currentNote = {value: `${sanitizedInput.trim()}`, createdAt: new Date(), id: + new Date() };
       storedNotes.unshift(currentNote);
 

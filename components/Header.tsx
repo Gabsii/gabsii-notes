@@ -7,8 +7,6 @@ const Header = ({mdParser, storedNotes, setNotes, onThemeChange}: HeaderComponen
   const theme = useTheme();
   const isLG = useMediaQuery('lg');
 
-  console.log(isLG);
-
   return (
     <div style={{ 
       position: 'sticky', 
