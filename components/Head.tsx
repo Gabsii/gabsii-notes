@@ -19,7 +19,7 @@ const Head = ({children}: {children: ReactNode}) => {
       <meta name='msapplication-tap-highlight' content='no' />
       <meta name='theme-color' content='#ffffff' />
                 
-      {/* <link rel='apple-touch-icon' sizes='180x180' href='/icons/apple-touch-icon.png' /> */}
+      <link rel='apple-touch-icon' sizes='180x180' href='/icons/icon-192x192.png' />
       <link rel='icon' type='image/png' sizes='32x32' href='/icons/favicon-32x32.png' />
       <link rel='icon' type='image/png' sizes='16x16' href='/icons/favicon-16x16.png' />
       <link rel='manifest' href='/manifest.json' />
@@ -30,14 +30,14 @@ const Head = ({children}: {children: ReactNode}) => {
       <meta name='twitter:url' content='https://notes.gabsii.com' />
       <meta name='twitter:title' content='Notes by Gabsii' />
       <meta name='twitter:description' content='Best Notes App in the world' />
-      {/* <meta name='twitter:image' content='https://notes.gabsii.com/icons/android-chrome-192x192.png' /> */}
+      <meta name='twitter:image' content='https://notes.gabsii.com/icons/icon-192x192.png' />
       <meta name='twitter:creator' content='@G4bsi' />
       <meta property='og:type' content='website' />
       <meta property='og:title' content='Notes by Gabsii' />
       <meta property='og:description' content='Best Notes App in the world' />
       <meta property='og:site_name' content='Notes by Gabsii' />
       <meta property='og:url' content='https://notes.gabsii.com' />
-      {/* <meta property='og:image' content='https://notes.gabsii.com/icons/apple-touch-icon.png' /> */}
+      <meta property='og:image' content='https://notes.gabsii.com/icons/icon-192x192.png' />
       {children}
     </NextHead>
   )
