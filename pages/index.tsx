@@ -22,7 +22,7 @@ const Home = ({ onThemeChange }) => {
         <Page.Header>
           <Header mdParser={mdParser} storedNotes={storedNotes} setNotes={setNotes} onThemeChange={onThemeChange}/>
         </Page.Header>
-        <Page.Content>
+        <Page.Content style={{ minHeight: '500px'}}>
           <Spacer />
           {
             storedNotes.map((note: NoteType) =>
