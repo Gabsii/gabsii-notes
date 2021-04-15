@@ -4,11 +4,24 @@ import { useEffect, useState } from "react";
 import { EditorComponentType } from "../types";
 import useKeyPress from "../utils/hooks/useKeyPress";
 
-const MdEditor = dynamic(() => import('react-markdown-editor-lite'), {
-  ssr: false
-});
+const MdEditor = dynamic(
+  () => {
+    return new Promise((resolve) => {
+      Promise.all([
+        import("react-markdown-editor-lite"),
+      ]).then(([Editor]) => {
+        console.log(Editor);
+        const FullscreenPlugin = Editor.Plugins.FullScreen;
+        Editor.default.unuse(FullscreenPlugin);
+        resolve(Editor.default);
+      });
+    });
+  },
+  {
+    ssr: false
+  }
+);
 
-// TODO: remove fullscreen plugin from MdEditor
 const Editor = ({mdParser, storedNotes, setNotes}: EditorComponentType) => {
   const [inputValue, setInputValue] = useState('');
   const enterPressed :boolean = useKeyPress('Enter');
